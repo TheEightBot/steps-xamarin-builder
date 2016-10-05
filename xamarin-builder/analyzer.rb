@@ -175,6 +175,7 @@ class Analyzer
           ]
           build_command << "/p:Platform=\"#{project_platform}\"" unless project_platform.eql?("AnyCPU")
           build_command << "\"#{project[:path]}\""
+          build_command << "/p:SolutionDir=\"#{@solution[:path]}\""
           build_command << "/verbosity:minimal"
           build_command << "/nologo"
 
